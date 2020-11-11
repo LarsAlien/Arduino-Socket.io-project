@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Datakom || Kontrollpanel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="libraries/socket.io.js"></script>
+    <script>
+        var meldingArr1 = [];
+    </script>
+</head>
+
+<body onload="sideOnLoad()">
+        <div id="hovedContainer">
+            <div id="venstreBoks">
+                <div class="btn-container">
+                    <div class="btn-title-con">
+                        <h2 class="btn-title">Dørkontroller</h2>
+                    </div>
+                    <div class="btn-box">
+                        <p>Lås dør</p>
+                        <label class="switch">
+                            <input type="checkbox" onchange="endreLaasDoor()" id="laasCheck">
+                            <span class="slider"></span>
+                        </label>
+                        <p id="laasP">Status: Åpen</p>
+                    </div>
+                    <div class="btn-box">
+                        <p>Åpne dør</p>
+                        <label class="switch">
+                            <input type="checkbox" onchange="endreStatusDoor()" id="statusCheck">
+                            <span class="slider"></span>
+                        </label>
+                        <p id="statusP">Status: Lukket</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hoyreBoks">
+                <!--Vindu for output meldinger-->
+                <div id="konsollVindu">
+                    <div id="botContainer">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    <script src="libraries/drag-drop.js"></script>
+    <script src="script/socket.js"></script>
+</body>
+
+</html>
